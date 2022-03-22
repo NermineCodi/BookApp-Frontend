@@ -27,6 +27,29 @@
 .App-link {
   color: #61dafb;
 }
+.book_card {
+  border: 1px solid #000;
+  border-radius: 4px;
+  padding: 8px;
+  margin: 8px auto;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-content:space-between;
+  
+}
+
+.book_input {
+margin-top: 20px;
+}
+
+.book_btn{
+margin: 5px;
+}
+
+.marginRight {
+  margin-right: 8px;
+}
 
 @keyframes App-logo-spin {
   from {
