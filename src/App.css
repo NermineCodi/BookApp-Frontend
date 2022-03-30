@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  color: black;
+  background-color: white;
 }
 
 .App-logo {
@@ -27,12 +29,30 @@
 .App-link {
   color: #61dafb;
 }
+
+.book_add{
+  background-color: lightblue;
+  /* margin-top: 0px;
+  flex-direction: row;
+  display: flex;
+  align-content: center; */
+}
+.book_list{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-items: center;
+}
+
 .book_card {
   border: 1px solid #000;
   border-radius: 4px;
   padding: 8px;
   margin: 8px auto;
   max-width: 300px;
+  max-height: 500px;
+  align-items: center;
   display: flex;
   flex-direction: column;
   align-content:space-between;
@@ -40,7 +60,8 @@
 }
 
 .book_input {
-margin-top: 20px;
+margin: 10px;
+
 }
 
 .book_btn{

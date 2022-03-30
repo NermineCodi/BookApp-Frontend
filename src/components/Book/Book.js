@@ -40,7 +40,7 @@ export default class Book extends Component {
 
     return (
        <div className="book_card">
-        <img alt="Book" style={{ width: '100%' }} src={url}/>
+        <img alt="Book" style={{ width: '100px', height: '150px' }} src={url}/>
         <p>{`Title: ${title}`}</p>
         <p>{`Description: ${description}`}</p>
         {authorName !== "" && 

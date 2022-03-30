@@ -6,9 +6,9 @@ export default class BookList extends Component {
   render() {
 
     return (
-      <>
+      <div className='book_list'>
         {this.props.books.map((book) => 
-          <Book
+          <Book className='book_list'
             key={book._id}
             id = {book._id} 
             title = {book.title}
@@ -20,7 +20,7 @@ export default class BookList extends Component {
             deleteBook = {this.props.deleteBook}
           />
         )}
-      </>
+      </div>
 
 
     )
