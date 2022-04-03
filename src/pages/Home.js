@@ -10,8 +10,7 @@ export default class Home extends Component {
     authors:[],
     error: false,
     loading: false,
-    error_message: "", 
-    image : {}
+    error_message: ""
   }
 
   async componentDidMount() {
@@ -161,10 +160,7 @@ export default class Home extends Component {
   }
 
   createBook = async (newBook) => {
-    console.log("this.state.image:",this.state.image)
-    if (this.state.image){
-      newBook.image = this.state.image.id
-    }
+    
     console.log("newBook:",newBook)
     try {
       const response = await fetch(`http://localhost:4000/api/books`,
@@ -195,7 +191,7 @@ export default class Home extends Component {
   render() {
     return (
     <div className="App">
-      <AddBook image={this.state.image} categories={this.state.categories} authors={this.state.authors} createBook={this.createBook} uploadImage={this.uploadImage}></AddBook>
+      <AddBook categories={this.state.categories} authors={this.state.authors} createBook={this.createBook} uploadImage={this.uploadImage}></AddBook>
       <BookList books={this.state.books} categories={this.state.categories} authors={this.state.authors} updateBook={this.updateBook} deleteBook={this.deleteBook} />
     </div>)
   }

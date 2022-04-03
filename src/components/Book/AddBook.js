@@ -11,7 +11,7 @@ export default class AddBook extends Component {
     selectedAuthor: "",
     selectedCategories: [],
     file: null,
-    image: this.props.image
+    image: ""
   }
 
   handleChange = (event) => {

@@ -3,20 +3,26 @@ import './App.css';
 import { Component } from 'react';
 import Home from './pages/Home';
 import Categories from './pages/Categories';
-import {BrowserRouter} from 'react-router-dom';
+import NotFound from './pages/NotFound'
+import Layout from './components/Layout';
 
-export default class App extends Component {  
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+
+export default class App extends Component {
 
   render() {
-    
+
     return (
       <BrowserRouter>
-      <div className="App">
-         {/* <Home/> */}
-         {/* <Categories/> */}
-      </div>
+        <Routes>
+          <Route element={<Layout />}>
+            <Route index element={<Home />}></Route>
+            <Route path={'categories'} element={<Categories />} />
+            <Route path={'/*'} element={<NotFound />} />
+          </Route>
+        </Routes>
       </BrowserRouter>
-      
     )
   }
 }
