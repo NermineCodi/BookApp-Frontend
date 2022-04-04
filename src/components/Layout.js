@@ -1,8 +1,8 @@
-import { Link, Outlet } from 'react-router-dom';
+import { Link, Outlet } from "react-router-dom";
 
 const Layout = () => {
   return (
-    <div style={{ backgroundColor: 'lightcoral' }}>
+    <div style={{ backgroundColor: "lightcoral" }}>
       {/* Navigation will be shared across all pages */}
       <nav>
         <ul>
@@ -12,11 +12,9 @@ const Layout = () => {
           <li>
             <Link to="/categories">Categories</Link>
           </li>
-          { 
-            false && <li>
+          <li>
             <Link to="/dashboard">Dashboard</Link>
           </li>
-          }
 
           <li>
             <Link to="/not-found">Not Found</Link>
@@ -27,8 +25,7 @@ const Layout = () => {
       {/* An <Outlet> renders whatever child route is currently active*/}
       <Outlet />
     </div>
-  )
-}
-
+  );
+};
 
 export default Layout;
